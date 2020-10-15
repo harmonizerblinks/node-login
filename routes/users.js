@@ -1,12 +1,10 @@
-const express = require('express');
-const router = express.Router();
 
+module.exports = (app)=> {
+    
+    //Login page router
+    app.get('/users/login', (req, res) => { res.render('login')});
 
+    //Login page router
+    app.get('/users/register', (req, res) => { res.render('register')});
 
-//Login page router
-router.get('users/login', (req, res) => res.render('login'));
-
-//Login page router
-router.get('/register', (req, res) => res.render('register'));
-
-module.exports = router;
+}
